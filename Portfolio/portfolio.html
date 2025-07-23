@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" alt="logo" class="logo" height="100px" width="100px">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="home">
+                <div class="header-text">
+                    <h1>Hii! I'm <span><u>Subrisa</u></span></h1>
+                    <p>Web Developer</p>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="girl2.jpg" alt="Girl">
+                </div>
+                <div class="about-col2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a Web Developer. I can design and build clean, responsive websites using HTML, CSS, JavaScript. Focused on performance, usability, and simple, elegant code. I enjoy turning complex problems into simple, beautiful, and intuitive interfaces. I'm focused on website development with minimal and efficient code.</p>
+                    <div class="tabtitle">
+                        <p class="tablink active-link" onclick="opentab('works')">My Works</p>
+                        <p class="tablink"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tabcontent active-tab" id="works">
+                        <ul>
+                            <li><span>Functional Stop Watch</span><br>Contains features like Start, Reset and lap</li>
+                            <li><span>Functional TIC TAC TOE Game</span><br>Detects the realtime win with clear highlights</li>
+                            <li><span>Smart To-Do list</span><br>Allows adding, editing and deleting tasks</li>
+                        </ul>
+                    </div>
+                    <div class="tabcontent" id="education">
+                        <ul>
+                            <li><span>2023-27</span><br>B Tech Information Technology at SSMIET</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="skills">
+        <div class="container">
+            <h1 class="sub-title">My Skills</h1>
+            <div class="skills-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>HTML</h2>
+                    <p>Semantic HTML5 is used to build well-organized, accessible and user-friendly web pages that serve as the foundation for styling and interactivity.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>CSS</h2>
+                    <p>Modern CSS including Flexbox, Grid and media queries is used to create clean, responsive designs that adapt smoothly to all screen sizes.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>JavaScript</h2>
+                    <p>JavaScript is used to build responsive and dynamic interfaces, also manages application logic, and enhance user experience on the frontend.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <h1 class="sub-title">Contact me</h1>
+        <p><a href="mailto:subrisa217@gmail.com"><i class="fas fa-paper-plane"></i> subrisa217@gmail.com</a></p>
+        <p><a href="tel:9626405040"><i class="fas fa-phone"></i> 9626405040</a></p>
+        <div class="social-icons">
+            <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+<script>
+    var tablinks=document.getElementsByClassName("tablink")
+    var tabcontents=document.getElementsByClassName("tabcontent")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
